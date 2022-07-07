@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'contact.dart';
 import 'login.dart';
 
 class Home extends StatelessWidget{
@@ -38,19 +39,11 @@ class Home extends StatelessWidget{
               },
             ),
             ListTile(
-              title: Text("contect",style: TextStyle(color: Colors.black26, fontSize: 15, fontWeight: FontWeight.bold),),
+              title: Text("contact",style: TextStyle(color: Colors.black26, fontSize: 15, fontWeight: FontWeight.bold),),
               leading: Icon(Icons.contact_page,color: Colors.lightGreen,size: 30),
               onTap: (){
                 Navigator.pop(context);
-                Navigator.push(context, MaterialPageRoute(builder: (context) => Home()));
-              },
-            ),
-            ListTile(
-              title: Text("Logout",style: TextStyle(color: Colors.black26, fontSize: 15, fontWeight: FontWeight.bold),),
-              leading: Icon(Icons.logout,color: Colors.lightGreen,size: 30),
-              onTap: (){
-                Navigator.pop(context);
-                Navigator.push(context, MaterialPageRoute(builder: (context) => Home()));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => contact()));
               },
             ),
             ListTile(
@@ -62,8 +55,8 @@ class Home extends StatelessWidget{
               },
             ),
             ListTile(
-              title: Text("Exit",style: TextStyle(color: Colors.black26, fontSize: 15, fontWeight: FontWeight.bold),),
-              leading: Icon(Icons.exit_to_app,color: Colors.lightGreen,size: 30),
+              title: Text("Logout",style: TextStyle(color: Colors.black26, fontSize: 15, fontWeight: FontWeight.bold),),
+              leading: Icon(Icons.logout,color: Colors.lightGreen,size: 30),
               onTap: (){
                 Navigator.pop(context);
                 Navigator.push(context, MaterialPageRoute(builder: (context) => Home()));
